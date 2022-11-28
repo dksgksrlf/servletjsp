@@ -1,14 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
-<%@ include file="common/header.jsp" %>
-<jsp:forward page="common/header.jsp"/>
+<%@ include file="/WEB-INF/views/common/header.jsp" %>
+
 
 <div class="card m-2">
 	<div class="card-header">
-		Home
+		get.jsp
 	</div>
 	<div class="card-body">
 	</div>
 </div>
 
-<%@ include file="common/footer.jsp" %>
+<%@ include file="/WEB-INF/views/common/footer.jsp" %>

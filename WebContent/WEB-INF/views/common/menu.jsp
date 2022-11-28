@@ -3,14 +3,14 @@
 <ul class="nav flex-column">
 	<li class="nav-item mb-2">
 		<h6 class="text-white">
-			<span class="mr-2">01.</span>
-			<a class="text-white" href="#">Servlet 설정</a>
+			<span class="mr-2">Exam01.</span>
+			<a class="text-white" href="/servletjsp/exam01/ContentController">JSP와 Servlet의 차이점</a>
 		</h6>
 	</li>
 	<li class="nav-item mb-2">
 		<h6 class="text-white">
-			<span class="mr-2">02.</span>
-			<a class="text-white" href="#">HTTP 요청 정보 얻기</a>
+			<span class="mr-2">Exam02.</span>
+			<a class="text-white" href="/servletjsp/exam02/ContentController">요청 방식</a>
 		</h6>
 	</li>
 	<li class="nav-item mb-2">

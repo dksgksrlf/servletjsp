@@ -8,23 +8,23 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-public class Exam02Controller extends HttpServlet {
+//@WebServlet(name="HomeController",urlPatterns="/HomeController")
+public class HomeController extends HttpServlet {
 	@Override
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println("Exam02Controller.init() 실행");
+		System.out.println("HomeController.init() 실행");
 	}
 	
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Exam02Controller.service() 실행");
+		System.out.println("HomeController.service() 실행");
 		//JSP로 이동
-		request.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
 			
 	}
 	@Override
 	public void destroy() {
-		System.out.println("Exam02Controller.destroy() 실행");
+		System.out.println("HomeController.destroy() 실행");
 	}
 		
 }
