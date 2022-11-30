@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 //urlPatterns은 value와 같다
 @WebServlet(name = "exam02.PostController", urlPatterns = "/exam02/PostController" )
 public class PostController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/exam02/post.jsp").forward(request, response);;
+	//클라이언트가 POST방식으로 요철할때마다 콜백
+	//역할: 요청처리
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/views/exam02/post.jsp").forward(request, response);
 	}
 
 }

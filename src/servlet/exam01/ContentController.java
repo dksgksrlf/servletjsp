@@ -17,10 +17,8 @@ import dto.Board;
 
 @WebServlet(name="exam01.ContentController",urlPatterns="/exam01/ContentController")
 public class ContentController extends HttpServlet {
-	@Override
-	public void init(ServletConfig config) throws ServletException {
-		System.out.println("ContentController.init()실행");
-	}
+	//클라이언트가 요청할때 마다 콜백(요청 방식과는 상관없다.)
+	//역할: 요청처리
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("ContentController.service()실행");
@@ -28,8 +26,5 @@ public class ContentController extends HttpServlet {
 		//JSP로 이동
 		request.getRequestDispatcher("/WEB-INF/views/exam01/content.jsp").forward(request, response);
 	}
-	@Override
-	public void destroy() {
-		System.out.println("ContentController.destroy() 실행");
-	}
+	
 }

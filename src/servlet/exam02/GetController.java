@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 //urlPatterns은 value와 같다
 @WebServlet(name = "exam02.GetController", urlPatterns = "/exam02/GetController" )
 public class GetController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/exam02/get.jsp").forward(request, response);;
+	//클라이언트가 GET방식으로 요청할때  마다 콜백
+	//역할: 요청 처리
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/views/exam02/get.jsp").forward(request, response);
 	}
-
+	
 }

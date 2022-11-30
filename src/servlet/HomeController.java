@@ -10,11 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 //@WebServlet(name="HomeController",urlPatterns="/HomeController")
 public class HomeController extends HttpServlet {
-	@Override
-	public void init(ServletConfig config) throws ServletException {
-		System.out.println("HomeController.init() 실행");
-	}
-	
+	//클라이언트가 요청할때 마다 콜백(요청 방식과는 상관없다.)
+	//역할: 요청처리
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("HomeController.service() 실행");
@@ -22,9 +19,6 @@ public class HomeController extends HttpServlet {
 		request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
 			
 	}
-	@Override
-	public void destroy() {
-		System.out.println("HomeController.destroy() 실행");
-	}
+	
 		
 }
