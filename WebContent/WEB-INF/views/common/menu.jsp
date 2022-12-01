@@ -34,7 +34,13 @@
 	<li class="nav-item mb-2">
 		<h6 class="text-white">
 			<span class="mr-2">Exam06.</span>
-			<a class="text-white" href="/servletjsp/exam06/ContentController">상태유지-쿠키</a>
+			<a class="text-white" href="/servletjsp/exam06/ContentController">상태유지-쿠키(클라이언트측 저장)</a>
+		</h6>
+	</li>
+	<li class="nav-item mb-2">
+		<h6 class="text-white">
+			<span class="mr-2">Exam07.</span>
+			<a class="text-white" href="/servletjsp/exam07/ContentController">상태유지-세션(서버측 저장)</a>
 		</h6>
 	</li>
 </ul>
