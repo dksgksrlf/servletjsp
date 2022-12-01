@@ -39,8 +39,28 @@
 	</li>
 	<li class="nav-item mb-2">
 		<h6 class="text-white">
-			<span class="mr-2">Exam07.</span>
-			<a class="text-white" href="/servletjsp/exam07/ContentController">상태유지-세션(서버측 저장)</a>
+			<span class="mr-2">Exam07. </span>
+			<a class="text-white" href="/servletjsp/exam07/ContentController">상태유지-HttpSession(서버측 저장)</a>
+		</h6>
+	</li>
+	<li class="nav-item mb-2">
+		<h6 class="text-white">
+			<span class="mr-2">Exam08.</span>
+			<a class="text-white" href="/servletjsp/exam08/ContentController">상태유지-ServletContext(서버측 저장,모든클라이언트)</a>
+		</h6>
+	</li>
+	<li class="nav-item mb-2">
+		<h6 class="text-white">
+			<span class="mr-2">Exam09.</span>
+			<a class="text-white" href="/servletjsp/HomeController">필터 테스트</a>
+		</h6>
+	</li>
+	<li class="nav-item mb-2">
+		<h6 class="text-white">
+			<span class="mr-2">Exam10.</span>
+			<a class="text-white" href="/servletjsp/exam10/ContentController">예외 처리</a>
+			
+		
 		</h6>
 	</li>
 </ul>

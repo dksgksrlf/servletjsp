@@ -1,42 +1,44 @@
 package servlet.exam07;
 
 import java.io.IOException;
+import java.util.Date;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-@WebServlet(name="exam06.UseCookieController",urlPatterns="/exam06/UseCookieController")
+@WebServlet(name="exam07.UseSessionController",urlPatterns="/exam07/UseSessionController")
 public class UseSessionController extends HttpServlet {
 	//클라이언트가 요청할때 마다 실행
 		@Override
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			//클라이언트가 보낸 쿠키들을 읽기
-			Cookie[] cookies=request.getCookies();
-			for(Cookie cookie:cookies) {
-				//쿠키 이름 일기
-				String name=cookie.getName();
-				if(name.equals("useremail")) {
-					//쿠키값 읽기
-					String value = cookie.getValue();
-					System.out.println("useremail: "+value);
-					//JSP에서 읽을 수 있도록 설정
-					request.setAttribute("useremail", value);
+			request.setCharacterEncoding("UTF-8");
+			//세션 객체 가져오기
+			HttpSession session=request.getSession();
+			//세션에 저장된 데이터(객체) 가져오기
+			String loginId=(String)session.getAttribute("loginId");
+			System.out.println("loginId:"+loginId);
+			
+			Date loginDate = (Date)session.getAttribute("loginDate");
+			System.out.println("loginDate: "+loginDate);
+			
+			List<String> cart = (List<String>) session.getAttribute("cart");
+			if(cart!=null) {
+				int i=1;
+				for(String productName : cart) {
+					System.out.println((i++)+":"+productName);
 				}
-				if(name.equals("userId")) {
-					//쿠키값 읽기
-					String value = cookie.getValue();
-					//System.out.println("useremail: "+value);
-					//JSP에서 읽을 수 있도록 설정
-					request.setAttribute("userId", value);
-				}
+				response.sendRedirect("ContentController");
 			}
-			request.getRequestDispatcher("/WEB-INF/views/exam06/useCookie.jsp").forward(request, response);
-		
 		}
-		
+		@Override
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			
+			
+		}
 		
 }
