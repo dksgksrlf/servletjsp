@@ -8,8 +8,8 @@
 		 content.jsp
 	</div>
 	<div class="card-body">
-		<a href="/servletjsp/exam10/ExceptionHandlingController" class="btn btn-info btn-sm">try-catch</a>
-		<a href="/servletjsp/exam10/NoExceptionHandlingController" class="btn btn-info btn-sm">web.xml</a>
+		<a href="${pageContext.request.contextPath}/exam10/ExceptionHandlingController" class="btn btn-info btn-sm">try-catch</a>
+		<a href="${pageContext.request.contextPath}/exam10/NoExceptionHandlingController" class="btn btn-info btn-sm">web.xml</a>
 		
 	</div>
 </div>

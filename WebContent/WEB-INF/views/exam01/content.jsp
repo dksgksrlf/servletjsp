@@ -8,8 +8,8 @@
 		Jsp와 Servlet의 차이점
 	</div>
 	<div class="card-body">
-		<a href="/servletjsp/views/exam01/boardList.jsp" class="btn btn-info btn-sm">JSP요청</a>
-		<a href="/servletjsp/exam01/BoardListController" class="btn btn-info btn-sm">Servlet</a>
+		<a href="${pageContext.request.contextPath}/views/exam01/boardList.jsp" class="btn btn-info btn-sm">JSP요청</a>
+		<a href="${pageContext.request.contextPath}/exam01/BoardListController" class="btn btn-info btn-sm">Servlet</a>
 	</div>
 </div>
 
