@@ -10,7 +10,7 @@ public class Board {
 	private String bcontent;
 	private String bwriter;
 	private Date bdate;
-	private String bfilename;
-	private String bsavedname;
-	private String bcontenttype;
+	private String bfileName;
+	private String bsavedName;
+	private String bfileType;
 }
