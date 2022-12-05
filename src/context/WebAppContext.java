@@ -3,6 +3,7 @@ package context;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.sql.DataSource;
 
 import dao.BoardDao;
 import dao.UserDao;
@@ -15,6 +16,11 @@ public class WebAppContext implements ServletContextListener{
 		System.out.println("ServletContext가 생성 완료됨");
 		//ServletContext 객체 얻기
 		ServletContext application = sce.getServletContext();
+		
+		//ConnectionPoll(javax.sql.DataSource)객체 얻기
+		DataSource dataSource = ConnectionProvider.getDataSource();
+		application.setAttribute("dataSource", dataSource);
+		
 		//ServletContext 객체에 데이터(객체)  저장
 		application.setAttribute("userService", new UserService(application));
 		application.setAttribute("boardService", new BoardService(application));
